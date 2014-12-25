@@ -2,8 +2,8 @@
 <resources>
 
     <string name="app_name">AutoResizeTextView</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">AutoResizeTextView</string>
+    <string name="super_long_text">Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</string>
+    <string name="input_hint">Write something long</string>
 
 </resources>
