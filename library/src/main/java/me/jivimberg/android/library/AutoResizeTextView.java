@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.text.Layout.Alignment;
 import android.text.StaticLayout;
@@ -54,6 +55,8 @@ public class AutoResizeTextView extends TextView {
 
     private int mWidthLimit;
 
+    private Typeface mTypeFace;
+
     private static final int NO_LINE_LIMIT = -1;
     private int mMaxLines;
 
@@ -77,6 +80,9 @@ public class AutoResizeTextView extends TextView {
 
     private void initialize() {
         mPaint = new TextPaint(getPaint());
+        if(mTypeFace != null){
+            mPaint.setTypeface(mTypeFace);
+        }
         mMaxTextSize = getTextSize();
         mAvailableSpaceRect = new RectF();
         mTextCachedSizes = new SparseIntArray();
@@ -308,4 +314,14 @@ public class AutoResizeTextView extends TextView {
         }
     }
 
+    @Override
+    public void setTypeface(Typeface tf) {
+        super.setTypeface(tf);
+        mTypeFace = tf;
+        if(mInitiallized){
+            mPaint.setTypeface(tf);
+            mTextCachedSizes.clear();
+            reAdjust();
+        }
+    }
 }

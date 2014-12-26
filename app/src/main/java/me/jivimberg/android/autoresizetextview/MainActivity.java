@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import me.jivimberg.android.autoresizetextview.font.CustomFont;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -20,6 +22,18 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         final TextView autoResizeTextView = (TextView) findViewById(R.id.textView);
+        autoResizeTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Choose a different font
+                CustomFont newFont;
+                do{
+                    newFont = CustomFont.randomFont();
+                } while(newFont.getFont(getAssets()) == autoResizeTextView.getTypeface());
+
+                newFont.setType(autoResizeTextView, getAssets());
+            }
+        });
 
         final EditText input = (EditText) findViewById(R.id.input);
         input.addTextChangedListener(new TextWatcher() {
