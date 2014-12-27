@@ -1,4 +1,4 @@
-package me.jivimberg.android.library;
+package com.github.jivimberg.library;
 
 import android.annotation.TargetApi;
 import android.content.Context;

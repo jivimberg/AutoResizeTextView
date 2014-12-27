@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_material_light"
-    tools:context="me.jivimberg.android.autoresizetextview.MainActivity">
+    tools:context="com.github.jivimberg.autoresizetextview.MainActivity">
 
-    <me.jivimberg.android.library.AutoResizeTextView
+    <com.github.jivimberg.library.AutoResizeTextView
         android:id="@+id/textView"
         android:text="@string/super_long_text"
         android:layout_width="fill_parent"

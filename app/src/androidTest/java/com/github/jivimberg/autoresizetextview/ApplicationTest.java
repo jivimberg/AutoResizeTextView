@@ -1,4 +1,4 @@
-package me.jivimberg.android.library;
+package com.github.jivimberg.autoresizetextview;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
